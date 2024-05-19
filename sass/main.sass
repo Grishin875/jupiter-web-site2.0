@@ -1,0 +1,466 @@
+@import "vars"
+*
+	margin: 0
+	padding: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+	&:focus
+		outline: none
+
+*::-webkit-input-placeholder
+	color: #c0c0c0
+	opacity: 1
+
+*:-moz-placeholder
+	color: #c0c0c0
+	opacity: 1
+
+*::-moz-placeholder
+	color: #c0c0c0
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #c0c0c0
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #000
+body input:required:valid,
+body textarea:required:valid
+	color: #000
+
+html,body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 140%
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+img
+	max-width: 100%
+
+
+::-webkit-scrollbar
+	width: 12px
+::-webkit-scrollbar-thumb
+	background: linear-gradient(transparen,#30ff00 )
+	border-radius: 6px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+	// style btn white color 
+.btn-white
+	display: block
+	font-size: 17px
+	font-weight: 600
+	line-height: 140%
+	padding: 19px 62px
+	background-color: $white
+	border: none
+	transition: all .8s
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.85)
+	cursor: pointer
+	&:hover
+		border-radius: 20px
+
+// btn style dark color
+.btn-dark
+	display: block
+	padding: 17px 62px
+	font-size: 17px
+	font-weight: 600
+	line-height: 140%
+	border: none
+	background-color: $accent
+	color: $white
+	cursor: pointer
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.862)
+	transition: all .8s 
+	&:hover
+		border-radius: 20px
+
+
+#top_banner
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 100vh
+	.inner_header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 40px
+		>a
+			color: $white
+			text-decoration: none
+			display: block
+			font-size: 48px
+			line-height: 140%
+		.mnu_top
+			display: flex
+			>li
+				list-style-type: none
+				display: block
+				>a
+					text-decoration: none
+					color: $white
+					font-size: 18px
+					font-weight: 400
+					margin-left: 20px
+					display: block
+					transition: all .4s ease
+					&:hover
+						color: darken($white, 10% )
+	.inner_header_info
+		margin-top: 180px
+		>h1
+			font-size: 65px
+			font-weight: 500
+			line-height: 90%
+			color: $white
+			max-width: 867px
+		>.descr
+			font-weight: 500
+			color: $white
+			line-height: 120%
+			max-width: 568px
+			margin-top: 20px
+		>button
+			margin-top: 40px
+
+.hamburger
+	display: none
+	.line
+		width: 24px
+		height: 3px
+		display: block
+		background-color: darken($white, 5% )
+		margin: 6px 10px 0 0
+		transition: all .6s ease-in-out
+		border-radius: 5px
+	&:hover
+		cursor: pointer
+	&.is-active .line
+		&:nth-child(1)
+			transform:  translateY(9px) rotate(45deg)
+		&:nth-child(2)
+			opacity: 0
+		&:nth-child(3)
+			transform:  translateY(-10px) rotate(-45deg)
+		
+			
+.about_project
+	padding-top: 100px
+	.wrapper_about_project
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.about_info_heading
+			color: $accent
+			font-size: 40px
+			font-weight: 600
+			line-height: 110%
+		.descr
+			font-size: 18px
+			font-weight: 400
+			color: $accent
+			line-height: 130%
+			min-width: 570px
+			margin-top: 20px
+
+#environment
+	margin-top: 100px
+	.environment_heading
+		font-size: 40px
+		font-weight: 600
+		line-height: 110%
+		color: $accent
+	.wrapper_environment
+		display: flex
+		justify-content: space-between
+		margin-top: 30px
+		.info_environment
+			font-size: 18px
+			font-weight: 400
+			line-height: 110%
+			color: $accent
+			max-width: 340px
+
+#offer
+	margin-top: 200px
+	.offer_full_info
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		.offer_heading
+			font-size: 23px
+			font-weight: 700
+			line-height: 120%
+			color: $accent
+		.descr 
+			font-size: 16px
+			font-weight: 400
+			line-height: 130%
+			color: $accent
+			margin-top: 20px
+			max-width: 580px
+		.btn-dark
+			margin-top: 20px
+
+#style
+	margin-top: 190px
+	.wrapper_style
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.heading_style
+			font-size: 40px
+			font-weight: 600
+			line-height: 110%
+			color: $accent
+		.descr
+			color: $accent
+			font-size: 18px
+			font-weight: 400
+			line-height: 130%
+			max-width: 600px
+			margin-top: 40px
+
+#travel
+	margin-top: 200px
+	.travel_heading
+		font-size: 40px
+		font-weight: 600
+		line-height: 110%
+		color: $accent
+		max-width: 1200px
+	.travel_text_info
+		color: $accent
+		font-size: 17px
+		font-weight: 400
+		line-height: 130%
+		max-width: 580px
+		margin-top: 100px
+
+
+#specifications
+	margin-top: 100px
+	.wrapper_specifications
+		display: flex
+		flex-direction: column
+		>h5
+			font-size: 40px
+			font-style: normal
+			font-weight: 600
+			line-height: 110%
+			color: $accent
+		>.private_specifications_info
+			margin-top: 50px
+			>.wrapper_section_specifications_border
+				border-top: 1px solid #909090
+				&:last-child
+					border-bottom: 1px solid #909090
+				>.inner_section_specifications
+					padding-top: 30px
+					padding-bottom: 30px
+					display: flex
+					justify-content: space-between
+					align-items: center
+					flex-wrap: wrap
+					>.title_specifications
+						font-size: 25px
+						font-style: normal
+						font-weight: 700
+						line-height: 120%
+						color: $accent
+					>.about_title_specifications
+						color: $accent
+						opacity: 0.800000011920929
+						font-size: 18px
+						font-style: normal
+						font-weight: 400
+						line-height: 130%
+						width: 540px
+						flex-shrink: 0
+					
+#footer
+	background-color: $accent
+	background-size: cover
+	margin-top: 200px
+	.wrapper_footer
+		padding-top: 100px
+		display: flex
+		justify-content: space-between
+		>.left_section_footer // left footer section
+			display: block
+			width: 45%
+			>h6
+				display: block
+				font-size: 22px
+				font-weight: 600
+				line-height: 120%
+				color: $white
+			>form
+				display: flex
+				flex-direction: column
+				margin-top: 20px
+				max-width: 360px
+				>input
+					background: none
+					border: none
+					color: #909090
+					letter-spacing: 1px
+					font-weight: 700
+					font-size: 11px
+					appearance: textfield
+					border-bottom: 1px solid #909090
+					padding-bottom: 5px
+					text-transform: uppercase
+					&:last-child
+						margin-top: 20px
+					&:placeholder
+						color: #909090
+						letter-spacing: 1px
+						font-weight: 700
+						font-size: 11px
+			>.checkbox_section
+				display: flex
+				margin-top: 10px
+				>input
+					width: 0
+					height: 0
+					opacity: 0
+					position: absolute
+					z-index: -1
+					&:checked + .custom-checbox::before
+						transform: translate(-50%, -50%) scale(1)
+ 
+				>span
+					position: relative
+					width: 17px
+					height: 17px
+					display: inline-block
+					background: none
+					border: 1px solid #909090
+					border-radius: 5px
+					vertical-align: sub
+					cursor: pointer
+					&::before
+						content: ''
+
+						// draw a tick
+						width: 10px
+						height: 10px
+						display: inline-block
+						background-image: url(/img/icon/array_checkbox.svg)
+						background-size: contain
+						background-repeat: no-repeat
+
+						// 	center alignment
+						position: absolute
+						left: 50%
+						top: 50%
+						margin-top: 2px
+						transform: translate(-50%, -50%) scale(0)
+						transition: 0.3s ease-in
+				>p
+					font-size: 14px
+					font-weight: 400
+					line-height: 140%
+					color: #909090
+					margin-left: 10px
+					>a
+						color: $white
+						letter-spacing: 2px
+						text-decoration: none
+						border-bottom: 1px solid #909090
+						
+			>button
+				margin-top: 25px
+		>.right_section_footer // right footer section 
+			width: 40%
+			>h6
+				display: block
+				font-size: 22px
+				color: $white
+				font-weight: 600
+				line-height: 120%
+			>.private_footer_right_section
+				display: flex
+				justify-content: space-between
+				align-items: center
+				margin-top: 20px
+				>.private_adress_section
+					flex-direction: column
+					display: flex
+					>p
+						color: $white
+						font-size: 16px
+						font-weight: 600
+						line-height: 130%
+					>div
+						margin-top: 2px
+						color: #909090
+						font-weight: 400
+						line-height: 130%
+						font-size: 16px
+					>.street_info
+						margin-top: 20px
+				>.social_network_section
+					flex-direction: column
+					display: flex
+					>p
+						color: $white
+						font-size: 16px
+						font-weight: 600
+						line-height: 130%
+					>div
+						margin-top: 2px
+						color: #909090
+						font-weight: 400
+						line-height: 130%
+						font-size: 16px
+					>.telegram_info
+						margin-top: 20px
+	.bottom_footer
+		margin-top: 90px
+		border-top: 1px solid #909090
+		padding-bottom: 100px
+		>.inner_bottom_footer
+			display: flex
+			justify-content: space-between
+			padding-top: 25px
+			.footer_nav
+				display: flex
+				>li
+					list-style-type: none
+					display: block
+					>a
+						display: block
+						text-decoration: none
+						margin-right: 20px
+						color: #ffffff
+						font-size: 18px
+			.right_bottom_footer
+				color: #909090
+				font-weight: 400
+				line-height: 140%
+				font-size: 18px
+
+
+// Website by WeyZzZ [Kirill Grishin]
